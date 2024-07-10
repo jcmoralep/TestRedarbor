@@ -8,7 +8,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "dotnetRunMessages": true,
-      "applicationUrl": "https://localhost:7114;http://localhost:5145"
+      "applicationUrl": "http://localhost:5145" // Solo HTTP
     },
     "IIS Express": {
       "commandName": "IISExpress",
@@ -23,10 +23,10 @@
       "launchBrowser": true,
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
       "environmentVariables": {
-        "ASPNETCORE_URLS": "https://+:443;http://+:8080"
+        "ASPNETCORE_URLS": "http://+:80"
       },
       "publishAllPorts": true,
-      "useSSL": true
+      "useSSL": false // No usar SSL
     }
   },
   "$schema": "https://json.schemastore.org/launchsettings.json",
