@@ -50,6 +50,8 @@ Este proyecto es una prueba técnica que utiliza buenas prácticas de programaci
 3) Se debe bajar la imagen de SQL Server y configurarse para trabajar en el puerto 1433 (validar en docker la ejecución de la imagen)
 4) Posteriormente abriremos Visual Studio
 5) En este ubicaremos la ventana Package Manager Console y ejecutaremos el comando: database-update (Esto realizara creación de la base de datos)
+![image](https://github.com/jcmoralep/TestRedarbor/assets/152304974/a9597713-da68-4ade-a6a3-51ba19524287)
+
 6) En Visual Studio lancaremos la aplicación Inventory.Api por el IIS Express
 7) Les tendrá que cargar el Swagger así: 
 
