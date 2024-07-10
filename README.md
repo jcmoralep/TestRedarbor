@@ -89,8 +89,7 @@ Este proyecto es una prueba técnica que utiliza buenas prácticas de programaci
       - User: sa
       - Password: Zaq2024sql24*
    - Ejecutar el script que está en la raiz del proyecto: Script-Bb/script-inventory.sql, validando que se ejecute correctamente
-   - Abrir la siguiente URL: http://localhost:8005/swagger/index.html 
-5) Se abrirá el swagger y se debe visualizar así:
+5) Abrir la siguiente URL: http://localhost:8005/swagger/index.html 
    ![image](https://github.com/jcmoralep/TestRedarbor/assets/152304974/ab7f1246-d9e0-4042-82fb-631fad4fe494)
 
 ## Uso de los servicios: 
