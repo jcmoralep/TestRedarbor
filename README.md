@@ -72,7 +72,7 @@ Este proyecto es una prueba técnica que utiliza buenas prácticas de programaci
    Data Source=localhost,1433;Initial Catalog=BDRedarbor;User Id=sa;Password=Zaq2024sql24*;
 3) En la consola de comandos o en Visual Studio (Ctrl + ñ) ubicarse en la raíz del proyecto y ejecutar el comando: 
    ```bash"
-   docker compose up -d"
+   docker compose up -d
 4) El paso anterior instala la imagen de SQL Server configurado para trabajar por el puerto 1433 (validar en docker la ejecución de la imagen)
 5) En este paso ejecutaremos el script de la base de datos:
    - Abrir el MS SQL Server localmente
