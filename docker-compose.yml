@@ -1,0 +1,21 @@
+version: '3.4'
+services:
+  mssql:
+    container_name: mssql-db
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      ACCEPT_EULA: 'Y'
+      MSSQL_SA_PASSWORD: 'Zaq2024sql24*'
+      MSSQL_PID: 'Developer'
+    ports:
+      - "1433:1433"
+    restart: always
+  inventoryapi:
+    container_name: inventory-api-service
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8005:80"
+    depends_on:
+      - mssql

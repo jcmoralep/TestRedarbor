@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inventory.Domain", "Inventory.Domain\Inventory.Domain.csproj", "{0B6B6437-7463-4815-A006-5DEDD8F831A3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inventory.Application", "Inventory.Application\Inventory.Application.csproj", "{3E58DDB7-1587-43A3-8D36-EB179DB8BACA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inventory.Infrastructure", "Inventory.Infrastructure\Inventory.Infrastructure.csproj", "{73ED0F25-34A7-4359-AFD7-38706FA9936D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Application", "Common.Application\Common.Application.csproj", "{E5B40247-6EEE-4E24-A70E-A804C816FEB2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inventory.Api", "Inventory.Api\Inventory.Api.csproj", "{86C247B4-6D5D-4881-BBFF-537B9F5DD76C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inventory.Test", "Inventory.Test\Inventory.Test.csproj", "{8FCBD6FB-CC23-45A1-8DED-2361E45C6B47}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{6515C1C7-37EC-4D59-8AB0-36E8B1F0185C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B6B6437-7463-4815-A006-5DEDD8F831A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B6B6437-7463-4815-A006-5DEDD8F831A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B6B6437-7463-4815-A006-5DEDD8F831A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B6B6437-7463-4815-A006-5DEDD8F831A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E58DDB7-1587-43A3-8D36-EB179DB8BACA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E58DDB7-1587-43A3-8D36-EB179DB8BACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E58DDB7-1587-43A3-8D36-EB179DB8BACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E58DDB7-1587-43A3-8D36-EB179DB8BACA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73ED0F25-34A7-4359-AFD7-38706FA9936D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73ED0F25-34A7-4359-AFD7-38706FA9936D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73ED0F25-34A7-4359-AFD7-38706FA9936D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73ED0F25-34A7-4359-AFD7-38706FA9936D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5B40247-6EEE-4E24-A70E-A804C816FEB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5B40247-6EEE-4E24-A70E-A804C816FEB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5B40247-6EEE-4E24-A70E-A804C816FEB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5B40247-6EEE-4E24-A70E-A804C816FEB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86C247B4-6D5D-4881-BBFF-537B9F5DD76C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86C247B4-6D5D-4881-BBFF-537B9F5DD76C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86C247B4-6D5D-4881-BBFF-537B9F5DD76C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86C247B4-6D5D-4881-BBFF-537B9F5DD76C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FCBD6FB-CC23-45A1-8DED-2361E45C6B47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FCBD6FB-CC23-45A1-8DED-2361E45C6B47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FCBD6FB-CC23-45A1-8DED-2361E45C6B47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FCBD6FB-CC23-45A1-8DED-2361E45C6B47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6515C1C7-37EC-4D59-8AB0-36E8B1F0185C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6515C1C7-37EC-4D59-8AB0-36E8B1F0185C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6515C1C7-37EC-4D59-8AB0-36E8B1F0185C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6515C1C7-37EC-4D59-8AB0-36E8B1F0185C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {76413E10-7271-4D35-9147-43DDA37A06D4}
+	EndGlobalSection
+EndGlobal
