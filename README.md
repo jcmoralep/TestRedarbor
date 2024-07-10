@@ -27,10 +27,12 @@ Este proyecto es una prueba técnica que utiliza buenas prácticas de programaci
    - Se implementa Entity Framework Core para los métodos de lectura.
    - Se utiliza Dapper para los métodos de escritura dentro de la clase `GenericRepository`.
 
-7. **Pruebas Unitarias:**
+7. **Identity Framework para el manejo de usuarios**
+
+9. **Pruebas Unitarias:**
    - Se realizan pruebas unitarias para cada método (GET, GETById, POST, PUT, DELETE) en el proyecto `PruebaRedabor.Test`.
 
-8. **Docker:**
+10. **Docker:**
    - Se utiliza Docker Compose para ejecutar la solución en un entorno Docker.
 
 ## Requerimientos para Ejecutar el Proyecto con IIS
