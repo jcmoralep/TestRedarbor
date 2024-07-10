@@ -2,38 +2,56 @@
 
 Este proyecto es una prueba técnica que utiliza buenas prácticas de programación, patrones de diseño y principios SOLID, basado en la arquitectura limpia y el patrón CQRS.
 
+## Tecnologías
+- .Net 6
+- Entity Framework Core
+- Identity Framework
+- Dapper
+- Swagger
+- API Rest
+- Unit Test de MS
+- JWT
+
 ## Alcance del Proyecto
 
-1. **Arquitectura:**
+1. **Arquitectura**
    - El proyecto está construido en .Net 6 utilizando la arquitectura limpia.
    - El nombre del proyecto es `PruebaRedabor`.
 
-2. **Proyecto Web API:**
+2. **Proyecto Web API**
    - Se crea un proyecto Web API denominado `PruebaRedabor.Api`.
    - Este proyecto contiene los controladores y Middlewares para gestionar excepciones personalizadas e instalación de servicios.
 
-3. **Biblioteca de Clases:**
+3. **Biblioteca de Clases**
    - Se desarrolla un proyecto de biblioteca de clases llamado `PruebaRedabor.Application`.
    - Este proyecto contiene toda la lógica de negocio, incluyendo los manejadores CQRS y DTOs.
 
-4. **Patrón CQRS:**
+4. **Patrón CQRS**
    - Se implementa el patrón CQRS para separar las operaciones de lectura y escritura.
    - Los métodos de lectura y escritura están organizados en la carpeta CQRS.
 
-5. **Patrón Repositorio Genérico:**
+5. **Patrón Repositorio Genérico**
    - Se utiliza el patrón de repositorio genérico en la capa `PruebaRedabor.Infrastructure`.
 
-6. **Entity Framework Core y Dapper:**
+6. **Entity Framework Core y Dapper**
    - Se implementa Entity Framework Core para los métodos de lectura.
    - Se utiliza Dapper para los métodos de escritura dentro de la clase `GenericRepository`.
 
-7. **Identity Framework para el manejo de usuarios**
+7. **Identity Framework**
+   - Para la administración de los usuarios
 
-9. **Pruebas Unitarias:**
+9. **Pruebas Unitarias**
    - Se realizan pruebas unitarias para cada método (GET, GETById, POST, PUT, DELETE) en el proyecto `PruebaRedabor.Test`.
 
-10. **Docker:**
-   - Se utiliza Docker Compose para ejecutar la solución en un entorno Docker.
+10. **Excepción Hanlder**
+    - Para para tolerancia a fallos y controlar las excepciones
+
+11. **Centralizador de servicios IInstaller**
+    - Moviendo la lógica de configuración de servicios a métodos más organizados y modulares.
+    - Esto mejora la legibilidad y el mantenimiento del código.
+
+12. **Docker:**
+   - Se utiliza Docker para ejecutar la solución en un entorno contenerizado.
 
 ## Requerimientos para Ejecutar el Proyecto con IIS
 
