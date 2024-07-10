@@ -1,68 +1,36 @@
-# Clean Architecture Solution
+# Prueba técnica
 
-This is a solution following the principles of Clean Architecture.
+Este proyecto es una prueba técnica usando buena practicas de programación, patrones de diseño y SOLID, basada en clean arquitectura y el patrón CQRS especialmente.
 
-## Technologies
+## Alcance del proyecto
 
-* [ASP.NET Core 6](https://docs.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-6.0)
-* [Entity Framework Core 6](https://docs.microsoft.com/en-us/ef/core/)
-* [React](https://reactjs.org/)
-* [MediatR](https://github.com/jbogard/MediatR)
-* [AutoMapper](https://automapper.org/)
-* [FluentValidation](https://fluentvalidation.net/)
-* [Serilog](https://serilog.net/)
-* [xUnit](https://nunit.org/)
-* [FluentAssertions](https://fluentassertions.com/)
-* [Moq](https://github.com/moq)
+1) Se contruye la aplicación en .Net 6 implementado la arquitectura (clean architecture). El proyecto tiene el nombre de PruebaRedabor
+2) Se crea un proyecto Web Api "PruebaRedabor.Api" el cual contiene los controladores, Middlewares(para poder realizar las excepciones personalizadas e installación de servicios)
+3) Se crea un proyecto de biblioteca de clases "PruebaRedabor.Application" el cual tiene toda la logica del negocio "midles de CQRS, y dtos"
+4) Se implementa el patron CQRS para la lectura y escritura de cada metodo, los cuales se encuentran en la carpeta CQRS
+5) Se implementa el patron repositorio generico en la capa "PruebaRedarbor.Infrastructure"
+6) Se implementa EntityFrameworkCore para los metodos de lectura y Dapper para los metodos de escritura (desde la clase GenericRepository)
+7) Se realizan pruebas unitarias cada una para un metodo GET, GETById, POST, PUT, DELETE en el proyecto PruebaRedarbor.Test
+9) Se maneja dockerCompose para ejecutar en docker la solución.
 
-## Getting Started
+## Requerimientos para ejecutar el proyecto
 
-1. Install the latest [.NET 6 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
-2. Install the latest [Node.js LTS](https://nodejs.org/en/)
-3. Navigate to `src/WebUI/ClientApp` and run `npm install`
-4. Navigate to `src/WebUI/ClientApp` and run `npm start` to launch the front end (Angular)
-5. Navigate to `src/WebUI` and run `dotnet run` to launch the back end (ASP.NET Core Web API)
+- Docker Desktop
+- Visual Studio 2022 con los paquetes de .Net 6
+- IIS
+- Navegador Web
+- Consola de comandos (Power Shell o consola de Windows)
 
-### Database Configuration
+## Pasos para poder usar el proyecto
 
-The solution is configured to use an in-memory database by default. This ensures that all users will be able to run the solution without needing to set up additional infrastructure (e.g. SQL Server).
+1) Clonar el repositorio: https://github.com/jcmoralep/TestRedarbor
+2) En la consola de comandos o en Visual Studio (Ctrl + ñ) ubicarse en la raíz del proyecto y ejecutar el comando "docker compose up -d"
+3) Se debe bajar la imagen de SQL Server y configurarse para trabajar en el puerto 1433 (validar en docker la ejecución de la imagen)
+4) Posteriormente abriremos Visual Studio
+5) En este ubicaremos la ventana Package Manager Console y ejecutaremos el comando: database-update (Esto realizara creación de la base de datos)
+6) En Visual Studio lancaremos la aplicación Inventory.Api por el IIS Express
+7) Les tendrá que cargar el Swagger así: 
 
-If you would like to use SQL Server, you will need to update **Web/appsettings.json** as follows:
-
-```json
-  "UseInMemoryDatabase": false,
-```
-
-Verify that the **DefaultConnection** connection string within **appsettings.json** points to a valid SQL Server instance. 
-
-When you run the application the database will be automatically created (if necessary) and the latest migrations will be applied.
-
-### Database Migrations
-
-To use `dotnet-ef` for your migrations please add the following flags to your command (values assume you are executing from repository root)
-
-* `--project src/Infrastructure` (optional if in this folder)
-* `--startup-project src/Web`
-* `--output-dir Persistence/Migrations`
-
-For example, to add a new migration from the root folder:
-
- `dotnet ef migrations add "SampleMigration" --project src\Infrastructure --startup-project src\Web --output-dir Persistence\EntityFramework\Migrations`
-
-## Overview
-
-### Domain
-
-This will contain all entities, enums, exceptions, interfaces, types and logic specific to the domain layer.
-
-### Application
-
-This layer contains all application logic. It is dependent on the domain layer, but has no dependencies on any other layer or project. This layer defines interfaces that are implemented by outside layers. For example, if the application need to access a notification service, a new interface would be added to application and an implementation would be created within infrastructure.
-
-### Infrastructure
-
-This layer contains classes for accessing external resources such as file systems, web services, smtp, and so on. These classes should be based on interfaces defined within the application layer.
-
-### Web
-
-This layer is a single page application based on React and ASP.NET Core 6. This layer depends on both the Application and Infrastructure layers, however, the dependency on Infrastructure is only to support dependency injection. Therefore only *Program.cs* should reference Infrastructure.
+8) Para hacer el uso de los servicios, debemos registrarnos en el end point: "Register"
+9) Obtendremos un token, que podremos usar en el AUTHORIZE, le debemos anteponer la palabra: bearer, un espacio seguido el token, ejemplo: bearer yJaaILoowksk
+10) De esta manera ya estaremos autenticados, podremos hacer uso de los servicios expuestos
