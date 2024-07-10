@@ -42,34 +42,37 @@ Este proyecto es una prueba técnica que utiliza buenas prácticas de programaci
 - IIS
 - Navegador Web
 - Consola de comandos (PowerShell o consola de Windows)
-- SQL Server Express
+- SQL Server
 
 ## Pasos para configurar el Proyecto
 
 1. **Clonar el Repositorio:**
    ```bash
    git clone https://github.com/jcmoralep/TestRedarbor
-2) En la consola de comandos o en Visual Studio (Ctrl + ñ) ubicarse en la raíz del proyecto y ejecutar el comando: 
+2) Se debe cambiar la cadena de conexión en el proyecto de Inventory.Api: "appsettings.json", de la solución clonada
+   ```bash
+   Data Source=localhost,1433;Initial Catalog=BDRedarbor;User Id=sa;Password=Zaq2024sql24*;
+3) En la consola de comandos o en Visual Studio (Ctrl + ñ) ubicarse en la raíz del proyecto y ejecutar el comando: 
    ```bash"
    docker compose up -d"
-3) Se debe bajar la imagen de SQL Server y configurarse para trabajar en el puerto 1433 (validar en docker la ejecución de la imagen)
-4) Posteriormente abriremos Visual Studio
+4) El paso anterior instala la imagen de SQL Server configurado para trabajar por el puerto 1433 (validar en docker la ejecución de la imagen)
 5) En este paso ejecutaremos el script de la base de datos:
-   - Abrir el MS SQL Server
+   - Abrir el MS SQL Server localmente
    - Iniciar sesión con las siguientes credenciales:
       - Server: localhost,1433
       - User: sa
       - Password: Zaq2024sql24*
    - Ejecutar el script que está en la raiz del proyecto: Script-Bb/script-inventory.sql, validando que se ejecute correctamente
-7) En Visual Studio lancaremos la aplicación Inventory.Api por el IIS Express
+6) En Visual Studio lancaremos la aplicación Inventory.Api por el IIS Express
    ![image](https://github.com/jcmoralep/TestRedarbor/assets/152304974/c12ce24f-6f21-446a-905b-cf1c51dedb4f)
-8) Les tendrá que cargar el Swagger así: 
+7) Tendrá que cargar el Swagger así: 
    ![image](https://github.com/jcmoralep/TestRedarbor/assets/152304974/ab7f1246-d9e0-4042-82fb-631fad4fe494)
 
 
 ## Requerimientos para Ejecutar el Proyecto con DOCKER
 
 - Docker Desktop
+- Sql Server
 - Navegador web
 
 1. **Clonar el Repositorio:**
@@ -87,7 +90,7 @@ Este proyecto es una prueba técnica que utiliza buenas prácticas de programaci
       - Password: Zaq2024sql24*
    - Ejecutar el script que está en la raiz del proyecto: Script-Bb/script-inventory.sql, validando que se ejecute correctamente
    - Abrir la siguiente URL: http://localhost:8005/swagger/index.html 
-5) Se abrira el swagger y se debe visualizar así:
+5) Se abrirá el swagger y se debe visualizar así:
    ![image](https://github.com/jcmoralep/TestRedarbor/assets/152304974/ab7f1246-d9e0-4042-82fb-631fad4fe494)
 
 ## Uso de los servicios: 
