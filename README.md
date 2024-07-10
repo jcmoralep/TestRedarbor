@@ -1,29 +1,51 @@
-# Prueba técnica
+# Prueba Técnica
 
-Este proyecto es una prueba técnica usando buena practicas de programación, patrones de diseño y SOLID, basada en clean arquitectura y el patrón CQRS especialmente.
+Este proyecto es una prueba técnica que utiliza buenas prácticas de programación, patrones de diseño y principios SOLID, basado en la arquitectura limpia y el patrón CQRS.
 
-## Alcance del proyecto
+## Alcance del Proyecto
 
-1) Se contruye la aplicación en .Net 6 implementado la arquitectura (clean architecture). El proyecto tiene el nombre de PruebaRedabor
-2) Se crea un proyecto Web Api "PruebaRedabor.Api" el cual contiene los controladores, Middlewares(para poder realizar las excepciones personalizadas e installación de servicios)
-3) Se crea un proyecto de biblioteca de clases "PruebaRedabor.Application" el cual tiene toda la logica del negocio "midles de CQRS, y dtos"
-4) Se implementa el patron CQRS para la lectura y escritura de cada metodo, los cuales se encuentran en la carpeta CQRS
-5) Se implementa el patron repositorio generico en la capa "PruebaRedarbor.Infrastructure"
-6) Se implementa EntityFrameworkCore para los metodos de lectura y Dapper para los metodos de escritura (desde la clase GenericRepository)
-7) Se realizan pruebas unitarias cada una para un metodo GET, GETById, POST, PUT, DELETE en el proyecto PruebaRedarbor.Test
-9) Se maneja dockerCompose para ejecutar en docker la solución.
+1. **Arquitectura:**
+   - El proyecto está construido en .Net 6 utilizando la arquitectura limpia.
+   - El nombre del proyecto es `PruebaRedabor`.
 
-## Requerimientos para ejecutar el proyecto
+2. **Proyecto Web API:**
+   - Se crea un proyecto Web API denominado `PruebaRedabor.Api`.
+   - Este proyecto contiene los controladores y Middlewares para gestionar excepciones personalizadas e instalación de servicios.
+
+3. **Biblioteca de Clases:**
+   - Se desarrolla un proyecto de biblioteca de clases llamado `PruebaRedabor.Application`.
+   - Este proyecto contiene toda la lógica de negocio, incluyendo los manejadores CQRS y DTOs.
+
+4. **Patrón CQRS:**
+   - Se implementa el patrón CQRS para separar las operaciones de lectura y escritura.
+   - Los métodos de lectura y escritura están organizados en la carpeta CQRS.
+
+5. **Patrón Repositorio Genérico:**
+   - Se utiliza el patrón de repositorio genérico en la capa `PruebaRedabor.Infrastructure`.
+
+6. **Entity Framework Core y Dapper:**
+   - Se implementa Entity Framework Core para los métodos de lectura.
+   - Se utiliza Dapper para los métodos de escritura dentro de la clase `GenericRepository`.
+
+7. **Pruebas Unitarias:**
+   - Se realizan pruebas unitarias para cada método (GET, GETById, POST, PUT, DELETE) en el proyecto `PruebaRedabor.Test`.
+
+8. **Docker:**
+   - Se utiliza Docker Compose para ejecutar la solución en un entorno Docker.
+
+## Requerimientos para Ejecutar el Proyecto
 
 - Docker Desktop
 - Visual Studio 2022 con los paquetes de .Net 6
 - IIS
 - Navegador Web
-- Consola de comandos (Power Shell o consola de Windows)
+- Consola de comandos (PowerShell o consola de Windows)
 
-## Pasos para poder usar el proyecto
+## Pasos para Usar el Proyecto
 
-1) Clonar el repositorio: https://github.com/jcmoralep/TestRedarbor
+1. **Clonar el Repositorio:**
+   ```bash
+   git clone https://github.com/jcmoralep/TestRedarbor
 2) En la consola de comandos o en Visual Studio (Ctrl + ñ) ubicarse en la raíz del proyecto y ejecutar el comando "docker compose up -d"
 3) Se debe bajar la imagen de SQL Server y configurarse para trabajar en el puerto 1433 (validar en docker la ejecución de la imagen)
 4) Posteriormente abriremos Visual Studio
