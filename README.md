@@ -7,6 +7,7 @@ Este proyecto es una prueba técnica que utiliza buenas prácticas de programaci
 - Entity Framework Core
 - Identity Framework
 - Dapper
+- SeriLog
 - Swagger
 - API Rest
 - Unit Test de MS
